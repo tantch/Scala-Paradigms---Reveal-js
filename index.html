@@ -15,7 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 	<link rel="stylesheet" href="css/reveal.css">
-	<link rel="stylesheet" href="css/theme/black.css" id="theme">
+	<link rel="stylesheet" href="css/theme/sky.css" id="theme">
 
 	<!-- Code syntax highlighting -->
 	<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -46,14 +46,119 @@
 				<h3>Object-Oriented Meets Functional</h3>
 			</section>
 
-			
+
 			<section>
 				<section>
-					<h2>Language characteristics</h2>
+
+					<h2>Scala's History</h2>
 					<p>
+						Where does it come from?
 					</p>
+
+				</section>
+
+				<section>
+					<p>Scala, a general-purpose, object-oriented, functional language for the JVM</p>
+					<p>created by Martin Odersky</p>
+				</section>
+
+				<section>
+					<p>Scala comes from java and has full support for functional programming and a strong static type system</p>
+				</section>
+
+
+				<section>
+					<p>Scala was design to support many of the criticised shortcommings of JAVA</p>
+				</section>
+
+
+				<section>
+					<pre>
+							<code data-trim class="scala">
+
+	object HelloWorld extends App {
+
+		println("Hello, World!")
+
+	}
+
+							</code>
+						</pre>
+				</section>
+
+
+			</section>
+
+			<section>
+
+				<section>
+					<h2>Scala's Paradigms</h2>
+				</section>
+				<section>
+					<h3>Object-Oriented</h3>
+				</section>
+
+				<section>
+					<h3>Functional</h3>
+				</section>
+
+
+			</section>
+
+			<section>
+				<section>
+					<h2>Scala's Advantages</h2>
+				</section>
+
+				<section>
+
+
+					<h2>Compared to Java</h2>
+					<ul>
+						<li>Reduced code sizes</li>
+						<li>More concise and clear than Java</li>
+						<li>Use all the java libraries and all the advantages of running on a JVM</li>
+						<li>Closures and functions as part of the language</li>
+						<li>Operator overloading</li>
+						<li>And much more ...</li>
+
+					</ul>
+
+
+				</section>
+
+				<section>
+					Java:
+					<pre><code data-trim class="java">
+						int mathFunction(int num) {
+	    int numSquare = num*num;
+	    return (int) (Math.cbrt(numSquare) +
+	      Math.log(numSquare));
+	}
+					</code></pre>
+					Scala:
+					<pre><code data-trim class="scala">
+						def mathFunction(num: Int): Int = {
+  var numSquare: Int = num*num
+  return (math.cbrt(numSquare) + math.log(numSquare)).
+    asInstanceOf[Int]
+}
+					</code></pre>
+					<pre><code data-trim class="scala">
+						import math._
+def intRoot23(num: Int) = {
+  val numSquare = num*num
+  (cbrt(numSquare) + log(numSquare)).toInt
+}
+					</code></pre>
+
+
 				</section>
 			</section>
+
+
+
+
 
 
 

@@ -135,8 +135,7 @@
 	    return (int) (Math.cbrt(numSquare) +
 	      Math.log(numSquare));
 	}
-					</code></pre>
-					Scala:
+					</code></pre> Scala:
 					<pre><code data-trim class="scala">
 						def mathFunction(num: Int): Int = {
   var numSquare: Int = num*num
@@ -152,6 +151,85 @@ def intRoot23(num: Int) = {
 }
 					</code></pre>
 
+
+				</section>
+
+				<section >
+					Java:
+					<pre><code data-trim class="java">
+						public class Point {
+	  private final double x, y;
+
+	  public Point(final double x, final double y) {
+	    this.x = x;
+	    this.y = y;
+	  }
+
+	  public Point(
+	    final double x, final double y,
+	    final boolean addToGrid
+	  ) {
+	    this(x, y);
+
+	    if (addToGrid)
+	      grid.add(this);
+	  }
+
+	  public Point() {
+	    this(0.0, 0.0);
+	  }
+
+	  public double getX() {
+	    return x;
+	  }
+
+	  public double getY() {
+	    return y;
+	  }
+
+	  double distanceToPoint(final Point other) {
+	    return distanceBetweenPoints(x, y,
+	      other.x, other.y);
+	  }
+
+	  private static Grid grid = new Grid();
+
+	  static double distanceBetweenPoints(
+	      final double x1, final double y1,
+	      final double x2, final double y2
+	  ) {
+	    return Math.hypot(x1 - x2, y1 - y2);
+	  }
+	}
+
+</section >
+<section >
+					</code></pre> Scala:
+					<pre><code data-trim class="scala">
+						class Point(
+	    val x: Double, val y: Double,
+	    addToGrid: Boolean = false
+	) {
+	  import Point._
+
+	  if (addToGrid)
+	    grid.add(this)
+
+	  def this() = this(0.0, 0.0)
+
+	  def distanceToPoint(other: Point) =
+	    distanceBetweenPoints(x, y, other.x, other.y)
+	}
+
+	object Point {
+	  private val grid = new Grid()
+
+	  def distanceBetweenPoints(x1: Double, y1: Double,
+	      x2: Double, y2: Double) = {
+	    math.hypot(x1 - x2, y1 - y2)
+	  }
+	}
+					</code></pre>
 
 				</section>
 			</section>
